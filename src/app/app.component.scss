@@ -1,0 +1,12 @@
+@import '../assets/scss/bootstrap-customized/_functions.scss';
+@import '../assets/scss/bootstrap-customized/_variables.scss';
+@import '../assets/scss/bootstrap-customized/_mixins.scss';
+.welcome {
+    display: none;
+}
+
+@include media-breakpoint-up(md) {
+    .welcome {
+        display: initial;
+    }
+}

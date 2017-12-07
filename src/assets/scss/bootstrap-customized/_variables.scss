@@ -1,0 +1,40 @@
+
+
+
+/*
+ * Images
+ */
+
+// $image-path: '/assets/images/';
+
+/*
+ * Fonts
+ */
+
+// $roboto-font-path: '../../fonts/roboto/' !default;
+// $font-family-sans-serif: Roboto !default; // Start with assigning color names to specific hex values.
+
+/*
+*   Colors
+*/
+
+// $brand-primary  : #cb2027 !default;
+// $brand-secondary: #a50e19 !default;
+// $text           : #494949;
+// $text-light     : #bfbfbf;
+
+// Margins
+$margin5: 5px !default;
+$margin10: 10px !default;
+$margin15: 15px !default;
+$margin30: 30px !default;
+$margin35: 35px !default;
+$margin40: 40px !default;
+$margin45: 45px !default;
+
+/*
+ * Bootstrap variables
+ */
+
+ @import '../bootstrap/_variables.scss';
+
