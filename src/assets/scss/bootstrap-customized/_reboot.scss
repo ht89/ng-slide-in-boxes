@@ -5,3 +5,8 @@
  *  If you want to override some bootstrap styles, you have to code below.
  */
 
+body {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/blurry-blue.jpg);
+    background-size: cover;
+    padding: 30px;
+}
