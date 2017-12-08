@@ -18,30 +18,27 @@ export class AppComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         let allMods = this.elementRef.nativeElement.querySelector('section').children;
         for (let module of allMods) {
-            if (this.isVisible(module, true)) {
+            if (this.isVisible(module)) {
                 this.renderer.setElementClass(module, 'already-visible', true);
             }
         }
     }
 
-    isVisible(el: any, partial: boolean): boolean {
+    isVisible(el: any): boolean {
         let viewTop = document.documentElement.scrollTop;
         let viewBottom = viewTop + document.documentElement.clientHeight;
         let top = el.offsetTop;
         let bottom = top + el.offsetHeight;
-        let compareTop = partial === true ? bottom : top;
-        let compareBottom = partial === true ? top : bottom;
 
         console.log('view top', viewTop, 'view bottom', viewBottom, 'top', top, 'bottom', bottom);
 
-        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        return ((top <= viewBottom) && (bottom >= viewTop));
     }
 
     @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
-        // console.log($event);
         let allMods = this.elementRef.nativeElement.querySelector('section').children;
         for (let module of allMods) {
-            if (this.isVisible(module, true)) {
+            if (this.isVisible(module)) {
                 this.renderer.setElementClass(module, 'come-in', true);
             }
         }
