@@ -30,8 +30,6 @@ export class AppComponent implements OnInit, AfterViewInit {
         let elTop = el.offsetTop;
         let elBottom = elTop + el.offsetHeight;
 
-        console.log('view top', viewTop, 'view bottom', viewBottom, 'element top', elTop, 'element bottom', elBottom);
-
         return ((elTop <= viewBottom) && (elBottom >= viewTop));
     }
 
