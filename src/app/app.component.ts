@@ -7,14 +7,12 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-    title = 'app';
-    numbers = Array(50).map((x, i) => i);
+    numbers = Array(20).map((x, i) => i);
 
     constructor(private elementRef: ElementRef, private renderer: Renderer) {
     }
 
     ngOnInit() {
-
     }
 
     ngAfterViewInit() {
@@ -26,7 +24,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         }
     }
 
-    isVisible(el:any, partial: boolean): boolean {
+    isVisible(el: any, partial: boolean): boolean {
         let viewTop = document.documentElement.scrollTop;
         let viewBottom = viewTop + document.documentElement.clientHeight;
         let top = el.offsetTop;
