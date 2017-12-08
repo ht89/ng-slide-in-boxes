@@ -27,12 +27,12 @@ export class AppComponent implements OnInit, AfterViewInit {
     isVisible(el: any): boolean {
         let viewTop = document.documentElement.scrollTop;
         let viewBottom = viewTop + document.documentElement.clientHeight;
-        let top = el.offsetTop;
-        let bottom = top + el.offsetHeight;
+        let elTop = el.offsetTop;
+        let elBottom = elTop + el.offsetHeight;
 
-        console.log('view top', viewTop, 'view bottom', viewBottom, 'top', top, 'bottom', bottom);
+        console.log('view top', viewTop, 'view bottom', viewBottom, 'element top', elTop, 'element bottom', elBottom);
 
-        return ((top <= viewBottom) && (bottom >= viewTop));
+        return ((elTop <= viewBottom) && (elBottom >= viewTop));
     }
 
     @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
